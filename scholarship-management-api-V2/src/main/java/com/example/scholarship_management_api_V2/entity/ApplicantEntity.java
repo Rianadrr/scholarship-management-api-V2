@@ -27,6 +27,7 @@ public class ApplicantEntity {
     @Column(nullable = false)
     private Double gpa;
 
-    @Column(nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "scholarship_id")
     private ScholarshipEntity scholarship;
 }
